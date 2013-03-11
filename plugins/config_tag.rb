@@ -14,13 +14,11 @@ class ConfigTag < Liquid::Tag
   end
 
   def render(context)
-    tag = config_tag(context.registers[:site].config, @key, @tag, @classname)
-    p tag
-    tag
+    config_tag(context.registers[:site].config, @key, @tag, @classname)
   end
 end
 
-def config_tag(config, key, tag, classname)
+def config_tag(config, key, tag=nil, classname=nil)
   options     = key.split('.').map { |k| config[k] }.last #reference objects with dot notation
   tag       ||= 'div'
   classname ||= key.sub(/_/, '-').sub(/\./, '-')
