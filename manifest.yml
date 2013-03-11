@@ -1,0 +1,8 @@
+name: "ConfigTag"
+author: "Brandon Mathis"
+description: "ConfigTag reads a Jekyll config and writes an HTML tag with its values as HTML5 data attributes"
+url: "https://github.com/octopress/config-tag"
+version: 1.0
+
+assets:
+  plugins: "plugins/config_tag.rb"
